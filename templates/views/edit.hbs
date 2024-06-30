@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/addmember">Add new member</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <form action="/edit/{{user._id}}?_method=PATCH" method="POST">
+          <div class="container mt-3 ">
+              <div class="mb-3 row justify-content-center">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10 col-md-6">
+                  <input type="text" class="form-control"  name="name" required>
+                </div>
+              </div>
+              <div class="mb-3 row justify-content-center">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10 col-md-6">
+                  <input type="email" class="form-control"  name="email" placeholder="abc@cd.com" required>
+                </div>
+              </div>
+              <div class="mb-3 row justify-content-center">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-10 col-md-6">
+                  <input type="tel" class="form-control"  name="phone" placeholder="xxxx-xxxxxxx" required>
+                </div>
+              </div>
+
+              <div class="mb-3 row justify-content-end mt-4">
+                  <input type="submit" value="Submit" class="btn btn-primary" style="width: 10%;">
+              </div>
+
+
+          </div>
+      </form>
+
+
+
+
+
+
+
+
+    {{!-- <script src="main.js"></script> --}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

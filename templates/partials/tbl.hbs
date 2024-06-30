@@ -1,0 +1,30 @@
+<table class="table table-striped" id="tab">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th>Edit|Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {{!-- this is the foreach loop in hbs --}}
+              {{#each documents}}
+                <tr>
+                  
+                  <th scope="row">1</th>
+                  <td>{{this.name}}</td>
+                  <td>{{this.email}}</td>
+                  <td>{{this.phone}}</td>
+                  
+                  <td><a href="/edit/{{this._id}}"><input type="submit" class="btn btn-success" value="Edit"> </a> <input type="submit" class="btn btn-danger" id="delBtn" value="Delete" data-userId="{{this._id}}"> </th>
+                  </td>
+                </tr>  
+              {{/each}}
+            </tbody>
+    </table>
+
+
+    
